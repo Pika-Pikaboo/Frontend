@@ -1,7 +1,7 @@
 import axios from "axios";
 
 class MovieDataService {
-  hostUrl = "https://movies-review-app.onrender.com/api/v1/movies";
+  hostUrl = "http://localhost:10000/api/v1/movies";
 
   getAll(page = 0) {
     return axios.get(`${this.hostUrl}?page=${page}`);
