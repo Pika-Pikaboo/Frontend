@@ -1,7 +1,9 @@
 import axios from "axios";
+import dotenv from "dotenv";
 
+dotenv.config();
 class MovieDataService {
-  hostUrl = "https://movies-review-app.onrender.com/api/v1/movies";
+  hostUrl = process.env.MOVIE_REVIEW_APP_HOSTED_URL;
 
   getAll(page = 0) {
     return axios.get(`${this.hostUrl}?page=${page}`);
